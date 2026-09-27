@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Furn — Loulwa Zidan</title>
+<meta name="description" content="Loulwa Zidan — motion graphic designer based in Cairo. Branding, editorial, packaging, UI and more.">
+<link rel="icon" href="assets/561ee1317bb91b83e725888ff944bc61.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+
+body{margin:0;background:#F4F2ED;font-family:'JetBrains Mono',monospace;color:#1E1C1A}
+a{color:#1E1C1A}
+.nav a .circ{opacity:0;transition:opacity .18s ease}
+.nav a:hover,.nav a:focus-visible{color:var(--accent,#B3202A) !important}
+.nav a:hover .circ,.nav a:focus-visible .circ{opacity:1}
+.nav a:focus-visible{outline:none}
+.cs:hover,.cs:focus-visible{color:var(--accent,#B3202A)}
+.pop{transition:opacity .8s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.yt:hover span:first-of-type,.yt:focus-visible span:first-of-type{background:var(--accent,#B3202A) !important;color:#F4F2ED !important}
+
+html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none}
+#stage{position:fixed;inset:0;overflow:hidden;touch-action:none}
+.dc-scale{position:absolute;left:0;top:0;transform-origin:0 0}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<noscript><p style="padding:24px;font-family:monospace">This site needs JavaScript turned on.</p></noscript>
+<template id="tpl-desktop">
+<div onWheel="{{onWheel}}" style="--accent: {{accent}}; position: relative; width: 1440px; height: {{__H}}px; overflow: hidden; background: {{bg}}; font-family: 'JetBrains Mono', monospace; color: #1E1C1A">
+
+<div style="position: absolute; left: 0; top: 0; width: 1440px; height: {{contentH}}px; transform: translate3d(0, {{scrollY}}px, 0); will-change: transform">
+
+<section style="position: absolute; left: 64px; top: 168px; width: 620px; display: flex; flex-direction: column; gap: 16px">
+<h1 style="margin: 0; font-weight: 500; font-size: 30px; line-height: 1.1; letter-spacing: 0.01em; text-transform: uppercase">Furn</h1>
+<span style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #1E1C1A">Branding — 2026</span>
+<p style="margin: 0; font-size: 14px; line-height: 1.6">Furn is a modern Egyptian bakery inspired by the traditional furn, the neighborhood bread oven that’s part of everyday life in Egypt. I’m focusing on eish baladi and reimagining it in a contemporary way.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.6">The aim is to preserve the cultural elements I grew up with, but present them in a way that feels visually modern, accessible, and relevant today. Overall, the bakery acts as a bridge between nostalgia and modernity, bringing the warmth of Egyptian tradition into a clean, curated, and updated space.</p>
+</section>
+
+<sc-for list="{{items}}" as="it" hint-placeholder-count="11">
+<div class="pop" style="position: absolute; left: {{it.x}}px; top: {{it.top}}px; width: {{it.w}}px; height: {{it.h}}px; opacity: {{it.op}}; transform: translate3d(0, {{it.dy}}px, 0) scale({{it.s}}); transform-origin: 50% 60%">
+<sc-if value="{{it.isVideo}}" hint-placeholder-val="{{ false }}">
+<video src="{{it.src}}" aria-label="{{it.alt}}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="width: 100%; height: 100%; object-fit: cover; display: block; background: #1E1C1A"></video>
+</sc-if>
+<sc-if value="{{it.isImg}}" hint-placeholder-val="{{ true }}">
+<img src="{{it.src}}" alt="{{it.alt}}" style="width: 100%; height: 100%; object-fit: {{it.fit}}; display: block">
+</sc-if>
+<sc-if value="{{it.isYt}}" hint-placeholder-val="{{ false }}">
+<a href="https://www.youtube.com/watch?v=vt4qulTkTuM" target="_blank" rel="noopener" class="yt" aria-label="Watch the full Crafted for Resilience animation on YouTube (opens in a new tab)" style="position: relative; display: block; width: 100%; height: 100%; overflow: hidden; background: #1E1C1A; text-decoration: none; color: #F4F2ED">
+<img src="assets/099ac8769249750d19514c0b8d443645.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.8">
+<span style="position: absolute; left: 50%; top: 50%; width: {{it.btn}}px; height: {{it.btn}}px; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #F4F2ED; color: #1E1C1A"><svg width="{{it.tri}}" height="{{it.tri}}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"></path></svg></span>
+<span style="position: absolute; left: {{it.pad}}px; bottom: {{it.pad}}px; right: {{it.pad}}px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: {{it.fs}}px; letter-spacing: 0.04em; text-transform: uppercase; color: #F4F2ED">Watch the full animation<span>YouTube ↗</span></span>
+</a>
+</sc-if>
+</div>
+</sc-for>
+
+<div style="position: absolute; left: 64px; top: {{endTop}}px; width: 1312px; display: flex; justify-content: flex-end; align-items: flex-end">
+<a href="lets-play-with-data.html" class="cs" style="display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none">Next — {Let's Play With Data}<svg width="26" height="14" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 8h25M19 1l7 7-7 7"></path></svg></a>
+</div>
+
+</div>
+
+<header style="position: absolute; left: 0; top: 0; width: 1440px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; padding: 36px 64px 0 64px">
+<a href="index.html" aria-label="Loulwa Zidan — home" style="display: block"><img src="assets/561ee1317bb91b83e725888ff944bc61.png" alt="Loulwa Zidan" style="width: 118px; height: auto; display: block"></a>
+<nav class="nav" style="display: flex; align-items: center; gap: 12px; padding-top: 6px; font-size: 21px; letter-spacing: 0.04em; line-height: 1">
+<a href="contact.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 16px; margin-right: 140px; text-decoration: none">contact<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; top: -2px; width: calc(100% + 8px); height: calc(100% + 4px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+<a href="projects.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 16px; text-decoration: none">projects<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; top: -2px; width: calc(100% + 8px); height: calc(100% + 4px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M12 28 C10 12 50 4 98 7 C128 10 128 40 80 48 C40 54 6 44 9 26 C12 12 46 5 84 5"></path></svg></a>
+<a href="about.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 16px; text-decoration: none">about me<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; top: -2px; width: calc(100% + 8px); height: calc(100% + 4px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+</nav>
+</header>
+
+<span style="position: absolute; left: 0; bottom: 20px; width: 1440px; text-align: center; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5B5750; opacity: {{hintOp}}; transition: opacity .4s ease; pointer-events: none">Scroll ↓</span>
+
+</div>
+</template>
+<template id="tpl-mobile">
+<div onWheel="{{onWheel}}" onTouchStart="{{touchStart}}" onTouchMove="{{touchMove}}" style="--accent: {{accent}}; position: relative; width: 390px; height: {{__H}}px; overflow: hidden; background: {{bg}}; font-family: 'JetBrains Mono', monospace; color: #1E1C1A">
+
+<div style="position: absolute; left: 0; top: 0; width: 390px; height: {{contentH}}px; transform: translate3d(0, {{scrollY}}px, 0); will-change: transform">
+
+<section style="position: absolute; left: 24px; top: 186px; width: 342px; display: flex; flex-direction: column; gap: 10px">
+<h1 style="margin: 0; font-weight: 500; font-size: 20px; line-height: 1.1; letter-spacing: 0.01em; text-transform: uppercase">Furn</h1>
+<span style="font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: #1E1C1A">Branding — 2026</span>
+<p style="margin: 0; font-size: 12px; line-height: 1.6">Furn is a modern Egyptian bakery inspired by the traditional furn, the neighborhood bread oven that’s part of everyday life in Egypt. I’m focusing on eish baladi and reimagining it in a contemporary way.</p>
+<p style="margin: 0; font-size: 12px; line-height: 1.6">The aim is to preserve the cultural elements I grew up with, but present them in a way that feels visually modern, accessible, and relevant today. Overall, the bakery acts as a bridge between nostalgia and modernity, bringing the warmth of Egyptian tradition into a clean, curated, and updated space.</p>
+</section>
+
+<sc-for list="{{items}}" as="it" hint-placeholder-count="11">
+<div class="pop" style="position: absolute; left: {{it.x}}px; top: {{it.top}}px; width: {{it.w}}px; height: {{it.h}}px; opacity: {{it.op}}; transform: translate3d(0, {{it.dy}}px, 0) scale({{it.s}}); transform-origin: 50% 60%">
+<sc-if value="{{it.isVideo}}" hint-placeholder-val="{{ false }}">
+<video src="{{it.src}}" aria-label="{{it.alt}}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" style="width: 100%; height: 100%; object-fit: cover; display: block; background: #1E1C1A"></video>
+</sc-if>
+<sc-if value="{{it.isImg}}" hint-placeholder-val="{{ true }}">
+<img src="{{it.src}}" alt="{{it.alt}}" style="width: 100%; height: 100%; object-fit: {{it.fit}}; display: block">
+</sc-if>
+<sc-if value="{{it.isYt}}" hint-placeholder-val="{{ false }}">
+<a href="https://www.youtube.com/watch?v=vt4qulTkTuM" target="_blank" rel="noopener" class="yt" aria-label="Watch the full Crafted for Resilience animation on YouTube (opens in a new tab)" style="position: relative; display: block; width: 100%; height: 100%; overflow: hidden; background: #1E1C1A; text-decoration: none; color: #F4F2ED">
+<img src="assets/099ac8769249750d19514c0b8d443645.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.8">
+<span style="position: absolute; left: 50%; top: 50%; width: {{it.btn}}px; height: {{it.btn}}px; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #F4F2ED; color: #1E1C1A"><svg width="{{it.tri}}" height="{{it.tri}}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"></path></svg></span>
+<span style="position: absolute; left: {{it.pad}}px; bottom: {{it.pad}}px; right: {{it.pad}}px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: {{it.fs}}px; letter-spacing: 0.04em; text-transform: uppercase; color: #F4F2ED">Watch the full animation<span>YouTube ↗</span></span>
+</a>
+</sc-if>
+</div>
+</sc-for>
+
+<div style="position: absolute; left: 24px; top: {{endTop}}px; width: 342px; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: 11.5px; line-height: 1.35; letter-spacing: 0.01em; text-transform: uppercase">
+<span>Motion graphic designer based in Cairo.</span>
+<span>Branding / Editorial / Packaging / UI &amp; MORE</span>
+</div>
+<a href="lets-play-with-data.html" class="cs" style="align-self: flex-end; display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none">Next — {Let's Play With Data}<svg width="20" height="11" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 8h25M19 1l7 7-7 7"></path></svg></a>
+</div>
+
+</div>
+
+<header style="position: absolute; left: 0; top: 0; width: 390px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; padding: 24px 20px 0 24px">
+<a href="index.html" aria-label="Loulwa Zidan — home" style="display: block"><img src="assets/561ee1317bb91b83e725888ff944bc61.png" alt="Loulwa Zidan" style="width: 72px; height: auto; display: block"></a>
+<nav class="nav" style="display: flex; flex-direction: column; align-items: flex-end; font-size: 15px; letter-spacing: 0.04em; line-height: 1">
+<a href="contact.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none">contact<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -2px; top: 4px; width: calc(100% + 4px); height: calc(100% - 8px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+<a href="projects.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none">projects<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -2px; top: 4px; width: calc(100% + 4px); height: calc(100% - 8px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M12 28 C10 12 50 4 98 7 C128 10 128 40 80 48 C40 54 6 44 9 26 C12 12 46 5 84 5"></path></svg></a>
+<a href="about.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none">about me<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -2px; top: 4px; width: calc(100% + 4px); height: calc(100% - 8px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+</nav>
+</header>
+
+</div>
+</template>
+<script>window.__DC_PAGE = {"desktop": {"js": "\nconst H = window.__DC_H;\nconst L = 64, R = 736, HW = 640, HH = 360;\nconst ITEMS = [\n  { kind: 'img', src: 'assets/a485c9831dabaf98119efb2ecf1b36d6.jpg', alt: 'True to Home pop-up poster, Barcelona', x: 64, top: 480, w: 416, h: 583, fit: 'cover' },\n  { kind: 'img', src: 'assets/7969f5b19dd2577604fc5b4ad1d12239.jpg', alt: 'True to Home pop-up poster, Paris', x: 512, top: 480, w: 416, h: 583, fit: 'cover' },\n  { kind: 'img', src: 'assets/2030fca3669f2f84dabe3cb56d0c6589.jpg', alt: 'True to Home pop-up poster, Amsterdam', x: 960, top: 480, w: 416, h: 583, fit: 'cover' },\n  { kind: 'img', src: 'assets/90df2c48f02313705038bcd9261b874d.jpg', alt: 'Furn kraft box with True to Home sticker and illustrated wrapping paper', x: 64, top: 1111, w: 1312, h: 738, fit: 'cover' },\n  { kind: 'img', src: 'assets/cca0ef6a4f73091e487c4b40fac68d5a.jpg', alt: 'Furn menus with the red MENU lettering', x: 64, top: 1897, w: 640, h: 424, fit: 'cover' },\n  { kind: 'img', src: 'assets/d882f1e96843d35ce00f20f7a8b5a2b8.jpg', alt: 'Eish baladi in a Furn paper pouch', x: 736, top: 1897, w: 640, h: 424, fit: 'cover' },\n  { kind: 'img', src: 'assets/7675e8ee0a39a44a6708bfa90b279382.jpg', alt: 'Furn kraft shopping bags, front and back', x: 64, top: 2353, w: 640, h: 424, fit: 'cover' },\n  { kind: 'img', src: 'assets/6eb770e62864b198672bb667c9df306d.jpg', alt: 'Furn True to Home coffee cup', x: 736, top: 2353, w: 640, h: 424, fit: 'cover' },\n  { kind: 'img', src: 'assets/4e17ac20f24d50428e80102669a20ead.jpg', alt: 'Furn True to Home playing cards', x: 64, top: 2809, w: 640, h: 424, fit: 'cover' },\n  { kind: 'img', src: 'assets/de20fb04f053f354afc1808d479dbc8c.jpg', alt: 'Furn True to Home t-shirt', x: 736, top: 2809, w: 640, h: 424, fit: 'cover' },\n  { kind: 'img', src: 'assets/aeba1b243874a406c280c23d9fa2c3ef.jpg', alt: 'Furn bakery van on an Amsterdam canal', x: 64, top: 3281, w: 1312, h: 738, fit: 'cover' }\n];\nconst END_TOP = 4139;\nconst CONTENT_H = END_TOP + 200;\nconst MAX_P = Math.max(0, CONTENT_H - H);\nclass Component extends DCLogic {\n  componentDidMount() {\n    this.p = 0;\n    this.t = 0;\n    this.rev = {};\n    const tick = () => {\n      const d = this.t - this.p;\n      let changed = false;\n      if (Math.abs(d) > 0.2) { this.p += d * 0.1; changed = true; }\n      ITEMS.forEach((it, i) => {\n        if (!this.rev[i] && (it.always || this.p >= Math.max(50 + i * 70, it.top - (H - 120)))) { this.rev[i] = true; changed = true; }\n      });\n      if (changed) this.setState({ p: this.p, n: Object.keys(this.rev).length });\n      this.raf = requestAnimationFrame(tick);\n    };\n    this.raf = requestAnimationFrame(tick);\n  }\n  componentWillUnmount() {\n    cancelAnimationFrame(this.raf);\n  }\n  renderVals() {\n    const p = (this.state && this.state.p != null) ? this.state.p : 0;\n    const rev = this.rev || {};\n    return {\n      accent: this.props.accent ?? '#B3202A',\n      bg: this.props.bg ?? '#F4F2ED',\n      contentH: CONTENT_H,\n      endTop: END_TOP,\n      scrollY: Math.round(-p * 10) / 10,\n      hintOp: p > 40 ? 0 : 1,\n      onWheel: (e) => { this.t = Math.min(MAX_P, Math.max(0, (this.t ?? 0) + e.deltaY * 0.9)); },\n      items: ITEMS.map((it, i) => ({\n        ...it,\n        op: (rev[i] || it.always) ? 1 : 0,\n        isVideo: it.kind === 'video',\n        isImg: it.kind === 'img',\n        isYt: it.kind === 'yt',\n        btn: 96, tri: 34, pad: 28, fs: 13,\n        dy: (rev[i] || it.always) ? 0 : 70,\n        s: (rev[i] || it.always) ? 1 : 0.86\n      }))\n    };\n  }\n}\n", "props": {"accent": "#B3202A", "bg": "#F4F2ED"}, "w": 1440, "tpl": "tpl-desktop"}, "mobile": {"js": "\nconst H = window.__DC_H;\nconst ROWS = [\n  [['img', 'assets/a485c9831dabaf98119efb2ecf1b36d6.jpg', 'True to Home pop-up poster, Barcelona', 'cover'], ['img', 'assets/7969f5b19dd2577604fc5b4ad1d12239.jpg', 'True to Home pop-up poster, Paris', 'cover'], ['img', 'assets/2030fca3669f2f84dabe3cb56d0c6589.jpg', 'True to Home pop-up poster, Amsterdam', 'cover']],\n  [['img', 'assets/90df2c48f02313705038bcd9261b874d.jpg', 'Furn kraft box with True to Home sticker and illustrated wrapping paper', 'cover']],\n  [['img', 'assets/cca0ef6a4f73091e487c4b40fac68d5a.jpg', 'Furn menus with the red MENU lettering', 'cover']],\n  [['img', 'assets/d882f1e96843d35ce00f20f7a8b5a2b8.jpg', 'Eish baladi in a Furn paper pouch', 'cover']],\n  [['img', 'assets/7675e8ee0a39a44a6708bfa90b279382.jpg', 'Furn kraft shopping bags, front and back', 'cover']],\n  [['img', 'assets/6eb770e62864b198672bb667c9df306d.jpg', 'Furn True to Home coffee cup', 'cover']],\n  [['img', 'assets/4e17ac20f24d50428e80102669a20ead.jpg', 'Furn True to Home playing cards', 'cover']],\n  [['img', 'assets/de20fb04f053f354afc1808d479dbc8c.jpg', 'Furn True to Home t-shirt', 'cover']],\n  [['img', 'assets/aeba1b243874a406c280c23d9fa2c3ef.jpg', 'Furn bakery van on an Amsterdam canal', 'cover']]\n];\nconst RH = [148, 192, 227, 227, 192, 192, 192, 227, 192];\nconst R0 = 560, GAP = 20;\nlet _y = R0;\nconst ITEMS = [];\nROWS.forEach((row, r) => {\n  row.forEach((s, c) => {\n    const w = row.length === 3 ? 106 : (row.length === 2 ? 163 : 342);\n    ITEMS.push({ kind: s[0], src: s[1], alt: s[2], fit: s[3], x: 24 + c * (w + (row.length === 3 ? 12 : 16)), w: w, h: RH[r], top: _y });\n  });\n  _y += RH[r] + GAP;\n});\nconst END_TOP = _y + 60;\nconst CONTENT_H = END_TOP + 170;\nconst MAX_P = Math.max(0, CONTENT_H - H);\nclass Component extends DCLogic {\n  componentDidMount() {\n    this.p = 0;\n    this.t = 0;\n    this.rev = {};\n    const tick = () => {\n      const d = this.t - this.p;\n      let changed = false;\n      if (Math.abs(d) > 0.2) { this.p += d * 0.1; changed = true; }\n      ITEMS.forEach((it, i) => {\n        if (!this.rev[i] && (it.always || this.p >= Math.max(50 + i * 110, it.top - (H - 90)))) { this.rev[i] = true; changed = true; }\n      });\n      if (changed) this.setState({ p: this.p, n: Object.keys(this.rev).length });\n      this.raf = requestAnimationFrame(tick);\n    };\n    this.raf = requestAnimationFrame(tick);\n  }\n  componentWillUnmount() {\n    cancelAnimationFrame(this.raf);\n  }\n  move(dy) {\n    this.t = Math.min(MAX_P, Math.max(0, (this.t ?? 0) + dy));\n  }\n  renderVals() {\n    const p = (this.state && this.state.p != null) ? this.state.p : 0;\n    const rev = this.rev || {};\n    return {\n      accent: this.props.accent ?? '#B3202A',\n      bg: this.props.bg ?? '#F4F2ED',\n      contentH: CONTENT_H,\n      endTop: END_TOP,\n      scrollY: Math.round(-p * 10) / 10,\n      onWheel: (e) => this.move(e.deltaY * 0.9),\n      touchStart: (e) => { this.ty = e.touches[0].clientY; },\n      touchMove: (e) => {\n        const y = e.touches[0].clientY;\n        this.move(((this.ty ?? y) - y) * 1.4);\n        this.ty = y;\n      },\n      items: ITEMS.map((it, i) => ({\n        ...it,\n        op: rev[i] ? 1 : 0,\n        isVideo: it.kind === 'video',\n        isImg: it.kind === 'img',\n        isYt: it.kind === 'yt',\n        btn: 56, tri: 20, pad: 14, fs: 10,\n        dy: rev[i] ? 0 : 60,\n        s: rev[i] ? 1 : 0.86\n      }))\n    };\n  }\n}\n", "props": {"accent": "#B3202A", "bg": "#F4F2ED"}, "w": 390, "tpl": "tpl-mobile"}};</script>
+<script src="runtime.js"></script>
+</body>
+</html>
