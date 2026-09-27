@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About me — Loulwa Zidan</title>
+<meta name="description" content="Loulwa Zidan — motion graphic designer based in Cairo. Branding, editorial, packaging, UI and more.">
+<link rel="icon" href="assets/561ee1317bb91b83e725888ff944bc61.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+
+body{margin:0;background:#F4F2ED;font-family:'JetBrains Mono',monospace;color:#1E1C1A}
+a{color:#1E1C1A}
+.xx{opacity:0;transition:opacity .18s ease}
+.yy{opacity:1}
+.zz{outline:none}
+.nav a .circ{opacity:0;transition:opacity .18s ease}
+.nav a:hover,.nav a:focus-visible{color:var(--accent,#B3202A) !important}
+.nav a:hover .circ,.nav a:focus-visible .circ{opacity:1}
+.nav a:focus-visible{outline:none}
+.cs:hover,.cs:focus-visible{color:var(--accent,#B3202A)}
+.sec{transition:opacity .7s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+
+html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none}
+#stage{position:fixed;inset:0;overflow:hidden;touch-action:none}
+.dc-scale{position:absolute;left:0;top:0;transform-origin:0 0}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<noscript><p style="padding:24px;font-family:monospace">This site needs JavaScript turned on.</p></noscript>
+<template id="tpl-desktop">
+<div onWheel="{{onWheel}}" style="--accent: {{accent}}; position: relative; width: 1440px; height: {{__H}}px; overflow: hidden; background: {{bg}}; font-family: 'JetBrains Mono', monospace; color: #1E1C1A">
+
+<div style="position: absolute; left: 0; top: 0; width: 1440px; transform: translate3d(0, {{scrollY}}px, 0); will-change: transform">
+<main style="box-sizing: border-box; width: 1440px; padding: 168px 64px 100px 64px; display: flex; flex-direction: column; gap: 48px">
+
+<section style="display: flex; flex-direction: column; gap: 20px; max-width: 960px">
+<h1 style="margin: 0; font-weight: 500; font-size: 30px; line-height: 1.1; letter-spacing: 0.01em; text-transform: uppercase">About me</h1>
+<p style="margin: 0; font-size: 24px; line-height: 1.45">I’m Loulwa Zidan, a motion graphic designer from Cairo and a recent graduate of IED Barcelona. I’m passionate about motion graphics, branding and visual storytelling.</p>
+
+</section>
+
+<section style="display: flex; flex-direction: row; gap: 0px; padding-top: 28px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 320px; flex-shrink: 0; font-weight: 500; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Education</h2>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 15px">IED Barcelona</span><span style="font-size: 15px; line-height: 1.6">Bachelor’s Degree in Motion Graphic Design</span><span style="font-size: 15px; line-height: 1.6; color: #5B5750">Graduated 2026</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 15px">MISR Language School</span><span style="font-size: 15px; line-height: 1.6">French Baccalaureate Diploma</span><span style="font-size: 15px; line-height: 1.6; color: #5B5750">Graduated 2022</span></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: row; gap: 0px; padding-top: 28px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 320px; flex-shrink: 0; font-weight: 500; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Experience</h2>
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 15px">VGBND — Production Intern</span><span style="font-size: 15px; line-height: 1.6; color: #5B5750">Barcelona, Spain · October – December 2025</span></div>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.6">
+<li>Supported the production team in the development and execution of visual content for ongoing projects.</li>
+<li>Assisted with on-set and post-production tasks, including organising materials, coordinating logistics and preparing assets.</li>
+<li>Gained hands-on experience in a fast-paced creative studio, working closely with the team from concept to final delivery.</li>
+</ul>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: row; gap: 0px; padding-top: 28px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 320px; flex-shrink: 0; font-weight: 500; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Skills</h2>
+<div style="display: flex; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 15px; margin-bottom: 6px">Design &amp; creative</span><span style="font-size: 15px; line-height: 1.6">Motion graphics &amp; animation</span><span style="font-size: 15px; line-height: 1.6">Graphic design</span><span style="font-size: 15px; line-height: 1.6">Branding</span><span style="font-size: 15px; line-height: 1.6">Packaging design</span><span style="font-size: 15px; line-height: 1.6">Editorial design</span><span style="font-size: 15px; line-height: 1.6">3D design &amp; Cinema 4D</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 15px; margin-bottom: 6px">Technical</span><span style="font-size: 15px; line-height: 1.6">Adobe After Effects</span><span style="font-size: 15px; line-height: 1.6">Adobe Premiere Pro</span><span style="font-size: 15px; line-height: 1.6">Adobe Photoshop</span><span style="font-size: 15px; line-height: 1.6">Adobe Illustrator</span><span style="font-size: 15px; line-height: 1.6">Adobe InDesign</span><span style="font-size: 15px; line-height: 1.6">Cavalry</span><span style="font-size: 15px; line-height: 1.6">Processing / p5</span><span style="font-size: 15px; line-height: 1.6">Claude Design</span></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: row; gap: 0px; padding-top: 28px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 320px; flex-shrink: 0; font-weight: 500; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Languages</h2>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 15px; line-height: 1.6"><span style="font-weight: 500">Arabic</span> — native</span>
+<span style="font-size: 15px; line-height: 1.6"><span style="font-weight: 500">English</span> — fluent</span>
+<span style="font-size: 15px; line-height: 1.6"><span style="font-weight: 500">French</span> — fluent</span>
+</div>
+</section>
+
+<a href="projects.html" class="cs" style="align-self: flex-end; display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none">See the work — {Projects}<svg width="26" height="14" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 8h25M19 1l7 7-7 7"></path></svg></a>
+
+</main>
+</div>
+
+<header style="position: absolute; left: 0; top: 0; width: 1440px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; padding: 36px 64px 0 64px">
+<a href="index.html" aria-label="Loulwa Zidan — home" style="display: block"><img src="assets/561ee1317bb91b83e725888ff944bc61.png" alt="Loulwa Zidan" style="width: 118px; height: auto; display: block"></a>
+<nav class="nav" style="display: flex; align-items: center; gap: 12px; padding-top: 6px; font-size: 21px; letter-spacing: 0.04em; line-height: 1">
+<a href="contact.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 16px; margin-right: 140px; text-decoration: none">contact<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; top: -2px; width: calc(100% + 8px); height: calc(100% + 4px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+<a href="projects.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 16px; text-decoration: none">projects<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; top: -2px; width: calc(100% + 8px); height: calc(100% + 4px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M12 28 C10 12 50 4 98 7 C128 10 128 40 80 48 C40 54 6 44 9 26 C12 12 46 5 84 5"></path></svg></a>
+<a href="about.html" aria-current="page" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 16px; text-decoration: none">about me<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; top: -2px; width: calc(100% + 8px); height: calc(100% + 4px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+</nav>
+</header>
+
+</div>
+</template>
+<template id="tpl-mobile">
+<div onWheel="{{onWheel}}" onTouchStart="{{touchStart}}" onTouchMove="{{touchMove}}" style="--accent: {{accent}}; position: relative; width: 390px; height: {{__H}}px; overflow: hidden; background: {{bg}}; font-family: 'JetBrains Mono', monospace; color: #1E1C1A">
+
+<div style="position: absolute; left: 0; top: 0; width: 390px; transform: translate3d(0, {{scrollY}}px, 0); will-change: transform">
+<main style="box-sizing: border-box; width: 390px; padding: 186px 24px 60px 24px; display: flex; flex-direction: column; gap: 36px">
+
+<section style="display: flex; flex-direction: column; gap: 14px; max-width: 342px">
+<h1 style="margin: 0; font-weight: 500; font-size: 20px; line-height: 1.1; letter-spacing: 0.01em; text-transform: uppercase">About me</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.45">I’m Loulwa Zidan, a motion graphic designer from Cairo and a recent graduate of IED Barcelona. I’m passionate about motion graphics, branding and visual storytelling.</p>
+
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 342px; flex-shrink: 0; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Education</h2>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 13px">IED Barcelona</span><span style="font-size: 13px; line-height: 1.6">Bachelor’s Degree in Motion Graphic Design</span><span style="font-size: 13px; line-height: 1.6; color: #5B5750">Graduated 2026</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 13px">MISR Language School</span><span style="font-size: 13px; line-height: 1.6">French Baccalaureate Diploma</span><span style="font-size: 13px; line-height: 1.6; color: #5B5750">Graduated 2022</span></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 342px; flex-shrink: 0; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Experience</h2>
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 13px">VGBND — Production Intern</span><span style="font-size: 13px; line-height: 1.6; color: #5B5750">Barcelona, Spain · October – December 2025</span></div>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.6">
+<li>Supported the production team in the development and execution of visual content for ongoing projects.</li>
+<li>Assisted with on-set and post-production tasks, including organising materials, coordinating logistics and preparing assets.</li>
+<li>Gained hands-on experience in a fast-paced creative studio, working closely with the team from concept to final delivery.</li>
+</ul>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 342px; flex-shrink: 0; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Skills</h2>
+<div style="display: flex; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 13px; margin-bottom: 6px">Design &amp; creative</span><span style="font-size: 13px; line-height: 1.6">Motion graphics &amp; animation</span><span style="font-size: 13px; line-height: 1.6">Graphic design</span><span style="font-size: 13px; line-height: 1.6">Branding</span><span style="font-size: 13px; line-height: 1.6">Packaging design</span><span style="font-size: 13px; line-height: 1.6">Editorial design</span><span style="font-size: 13px; line-height: 1.6">3D design &amp; Cinema 4D</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 500; font-size: 13px; margin-bottom: 6px">Technical</span><span style="font-size: 13px; line-height: 1.6">Adobe After Effects</span><span style="font-size: 13px; line-height: 1.6">Adobe Premiere Pro</span><span style="font-size: 13px; line-height: 1.6">Adobe Photoshop</span><span style="font-size: 13px; line-height: 1.6">Adobe Illustrator</span><span style="font-size: 13px; line-height: 1.6">Adobe InDesign</span><span style="font-size: 13px; line-height: 1.6">Cavalry</span><span style="font-size: 13px; line-height: 1.6">Processing / p5</span><span style="font-size: 13px; line-height: 1.6">Claude Design</span></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #CFCAC0">
+<h2 style="margin: 0; width: 342px; flex-shrink: 0; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #1e1c1a">Languages</h2>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 13px; line-height: 1.6"><span style="font-weight: 500">Arabic</span> — native</span>
+<span style="font-size: 13px; line-height: 1.6"><span style="font-weight: 500">English</span> — fluent</span>
+<span style="font-size: 13px; line-height: 1.6"><span style="font-weight: 500">French</span> — fluent</span>
+</div>
+</section>
+
+<a href="projects.html" class="cs" style="align-self: flex-end; display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none">See the work — {Projects}<svg width="26" height="14" viewBox="0 0 28 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 8h25M19 1l7 7-7 7"></path></svg></a>
+
+</main>
+</div>
+
+<header style="position: absolute; left: 0; top: 0; width: 390px; box-sizing: border-box; display: flex; justify-content: space-between; align-items: flex-start; padding: 24px 20px 0 24px">
+<a href="index.html" aria-label="Loulwa Zidan — home" style="display: block"><img src="assets/561ee1317bb91b83e725888ff944bc61.png" alt="Loulwa Zidan" style="width: 72px; height: auto; display: block"></a>
+<nav class="nav" style="display: flex; flex-direction: column; align-items: flex-end; font-size: 15px; letter-spacing: 0.04em; line-height: 1">
+<a href="contact.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none">contact<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -2px; top: 4px; width: calc(100% + 4px); height: calc(100% - 8px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+<a href="projects.html" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none">projects<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -2px; top: 4px; width: calc(100% + 4px); height: calc(100% - 8px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M12 28 C10 12 50 4 98 7 C128 10 128 40 80 48 C40 54 6 44 9 26 C12 12 46 5 84 5"></path></svg></a>
+<a href="about.html" aria-current="page" style="position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none">about me<svg class="circ" viewBox="0 0 130 56" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -2px; top: 4px; width: calc(100% + 4px); height: calc(100% - 8px); overflow: visible; pointer-events: none" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path vector-effect="non-scaling-stroke" d="M14 30 C8 10 60 3 104 8 C130 12 126 44 74 50 C34 54 4 42 10 24 C16 10 52 4 90 6"></path></svg></a>
+</nav>
+</header>
+
+</div>
+</template>
+<script>window.__DC_PAGE = {"desktop": {"js": "\nconst H = window.__DC_H;\nconst CONTENT_H = 1720;\nconst MAX_P = Math.max(0, CONTENT_H - H);\nclass Component extends DCLogic {\n  componentDidMount() {\n    this.p = 0;\n    this.t = 0;\n    const tick = () => {\n      const d = this.t - this.p;\n      if (Math.abs(d) > 0.2) { this.p += d * 0.1; this.setState({ p: this.p }); }\n      this.raf = requestAnimationFrame(tick);\n    };\n    this.raf = requestAnimationFrame(tick);\n  }\n  componentWillUnmount() {\n    cancelAnimationFrame(this.raf);\n  }\n  move(dy) {\n    this.t = Math.min(MAX_P, Math.max(0, (this.t ?? 0) + dy));\n  }\n  renderVals() {\n    const p = (this.state && this.state.p != null) ? this.state.p : 0;\n    return {\n      accent: this.props.accent ?? '#B3202A',\n      bg: this.props.bg ?? '#F4F2ED',\n      scrollY: Math.round(-p * 10) / 10,\n      onWheel: (e) => this.move(e.deltaY * 0.9),\n      touchStart: (e) => { this.ty = e.touches[0].clientY; },\n      touchMove: (e) => {\n        const y = e.touches[0].clientY;\n        this.move(((this.ty ?? y) - y) * 1.4);\n        this.ty = y;\n      }\n    };\n  }\n}\n", "props": {"accent": "#B3202A", "bg": "#F4F2ED"}, "w": 1440, "tpl": "tpl-desktop"}, "mobile": {"js": "\nconst H = window.__DC_H;\nconst CONTENT_H = 2440;\nconst MAX_P = Math.max(0, CONTENT_H - H);\nclass Component extends DCLogic {\n  componentDidMount() {\n    this.p = 0;\n    this.t = 0;\n    const tick = () => {\n      const d = this.t - this.p;\n      if (Math.abs(d) > 0.2) { this.p += d * 0.1; this.setState({ p: this.p }); }\n      this.raf = requestAnimationFrame(tick);\n    };\n    this.raf = requestAnimationFrame(tick);\n  }\n  componentWillUnmount() {\n    cancelAnimationFrame(this.raf);\n  }\n  move(dy) {\n    this.t = Math.min(MAX_P, Math.max(0, (this.t ?? 0) + dy));\n  }\n  renderVals() {\n    const p = (this.state && this.state.p != null) ? this.state.p : 0;\n    return {\n      accent: this.props.accent ?? '#B3202A',\n      bg: this.props.bg ?? '#F4F2ED',\n      scrollY: Math.round(-p * 10) / 10,\n      onWheel: (e) => this.move(e.deltaY * 0.9),\n      touchStart: (e) => { this.ty = e.touches[0].clientY; },\n      touchMove: (e) => {\n        const y = e.touches[0].clientY;\n        this.move(((this.ty ?? y) - y) * 1.4);\n        this.ty = y;\n      }\n    };\n  }\n}\n", "props": {"accent": "#B3202A", "bg": "#F4F2ED"}, "w": 390, "tpl": "tpl-mobile"}};</script>
+<script src="runtime.js"></script>
+</body>
+</html>
